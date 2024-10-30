@@ -6,6 +6,8 @@ type TInstrutores = {
     email: string
 }
 
+let proximoIdentificador =3
+
 const instrutores:TInstrutores[] = [
     {
         id: 1,
@@ -43,7 +45,7 @@ export function cadastrar(req:Request, res:Response):any {
   const { nome, email } =req.body
 
 const novoInstrutor = {
-    id: 3,
+    id: proximoIdentificador++,
     nome,
     email
 
