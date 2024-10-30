@@ -38,3 +38,19 @@ export const detalhar = (req:Request, res:Response):any =>{
     
     return res.status(200).json(instrutor)
 }
+
+export function cadastrar(req:Request, res:Response):any {
+  const { nome, email } =req.body
+
+const novoInstrutor = {
+    id: 3,
+    nome,
+    email
+
+  }
+
+  instrutores.push(novoInstrutor)
+
+  return res.status(201).json(novoInstrutor)
+    
+}
